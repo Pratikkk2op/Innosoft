@@ -1,0 +1,437 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset some basic styles */
+body, h1, h2, h3, p, ul, li, a, form, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('innosoft-logo.png') repeat;
+    background-size: 100px 100px;
+    background-color: rgba(249, 249, 249, 0.8); /* Faded background color */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styling */
+.navbar {
+    background: rgba(249, 249, 249, 0.8); /* Faded background color */
+    color: #333;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    transition: height 0.3s;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+}
+
+.navbar .nav-links li {
+    margin-left: 1.5rem;
+}
+
+.navbar .nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff6f61;
+    transition: width 0.3s;
+}
+
+.navbar .nav-links a:hover::before {
+    width: 100%;
+}
+
+.navbar .nav-links a:hover {
+    color: #ff6f61;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 25px 0 0 25px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-button {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    background: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.search-button:hover {
+    background: #ff4a3a;
+}
+
+/* Hero section styling */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?office,workspace') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding-top: 4rem; /* For fixed navbar space */
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.hero .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero .cta-button {
+    background: #ff6f61;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero .cta-button:hover {
+    background: #ff4a3a;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero .cta-button.secondary {
+    background: #fff;
+    color: #ff6f61;
+    border: 2px solid #ff6f61;
+}
+
+.hero .cta-button.secondary:hover {
+    background: #ff6f61;
+    color: #fff;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Section styling */
+.textured-background {
+    position: relative;
+    background: url('/mnt/data/Screenshot 2024-06-06 150734.png') repeat;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.textured-background h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.textured-background .service-cards,
+.textured-background .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Services section styling */
+.services .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.services .card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.services .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.services .card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6f61
+}
+
+.services .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.services .card p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Testimonials section styling */
+.testimonials .testimonial-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonials .testimonial-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.testimonials .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials .testimonial-card p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.testimonials .client-name {
+    font-weight: 700;
+    color: #333;
+}
+
+/* About section styling */
+.about .container {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto; /* Aligning the section to the center */
+}
+
+/* Card styling */
+.card-background {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.about p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Contact section styling */
+.contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact button {
+    background: #222;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background: #444;
+}
+
+/* Footer styling */
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.footer .socials {
+    margin-top: 1rem;
+}
+
+.footer .socials a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.footer .socials a:hover {
+    color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .contact h2 {
+        font-size: 2rem;
+    }
+
+    .services .service-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
