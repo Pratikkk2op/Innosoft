@@ -121,7 +121,7 @@ body {
 
 /* Hero section styling */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://unsplash.com/photos/a-group-of-people-sitting-around-a-table-with-laptops-9yDlVHZxymc') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?office,workspace') no-repeat center center/cover;
     color: #fff;
     height: 100vh;
     display: flex;
